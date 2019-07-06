@@ -26,6 +26,12 @@ Add to your Nuxt project via [`modules`][modules]:
 
 [modules]: https://nuxtjs.org/guide/modules/
 
+```js
+export default {
+  modules: [`nuxt-static-render`]
+}
+```
+
 ## Usage
 
 Simply wrap your _dead markup fragments_ in `<nuxt-static-render>` anywhere
@@ -70,7 +76,7 @@ export default {
 
 The `top` div, rendered with `<nuxt-static-render>` should have markup based
 on `$staticData.foobar`, which is **only populated on the server** and **is not 
-added to the __NUXT__** payload. That means this data will only be used on the 
+added to the `__NUXT__`** payload. That means this data will only be used on the 
 server to render markup and immediately discarded.
 
 ## Advanced
@@ -102,5 +108,16 @@ export default {
 }
 ```
 
-Use this feature **with caution** and only if you absolutely must avoid 
-`__NUXT__`-based hydration due to exceptionally large content.
+In this usage, you can also define:
+
+```js
+export default {
+  clientDataLoaded(data) {
+  }
+}
+```
+
+As a way of knowing when the data has been fully hydrated on the client.
+
+> Use this feature only if you absolutely must avoid `__NUXT__`-based hydration 
+> due to exceptionally large content.

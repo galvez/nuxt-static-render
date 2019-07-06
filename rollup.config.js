@@ -2,6 +2,7 @@ import path from 'path'
 import { readJSONSync } from 'fs-extra'
 import commonjsPlugin from 'rollup-plugin-commonjs'
 import autoExternalPlugin from 'rollup-plugin-auto-external'
+import copyPlugin from 'rollup-plugin-copy'
 
 const rootDir = process.cwd()
 const input = 'src/index.js'
@@ -18,6 +19,13 @@ export default {
   },
   plugins: [
     autoExternalPlugin(),
-    commonjsPlugin()
+    commonjsPlugin(),
+    copyPlugin({
+      targets: [
+        { src: 'src/component.js', dest: 'dist' },
+        { src: 'src/middleware.js', dest: 'dist' },
+        { src: 'src/plugin.js', dest: 'dist' }
+      ]
+    })
   ]
 }
