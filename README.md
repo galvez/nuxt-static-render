@@ -83,9 +83,9 @@ server to render markup and immediately discarded.
 
 Say you have a huge chunk of markup that needs to be server-rendered for SEO,
 but you don't want a massive `__NUXT__` payload to go with it. Still, once that
-markup is rendered on the client, you still have bits of it that **need 
-hydration** so they can continue to be updated on the client. For this specific
-case, you can provide `clientData()`:
+markup is rendered on the client, you have bits of it that **need hydration** 
+so they can continue to be updated on the client. For this specific case, you 
+can provide `clientData()`:
 
 ```js
 export default {
