@@ -121,3 +121,12 @@ As a way of knowing when the data has been fully hydrated on the client.
 
 > Use this feature only if you absolutely must avoid `__NUXT__`-based hydration 
 > due to exceptionally large content.
+
+# Kudos
+
+To [Markus Oberlehner][markus] for [vue-lazy-hydration][vlh], which served
+as inspiration for this module. The `asyncFactory` `render()` hack is mainly
+what makes this possible at all.
+
+[markus]: https://github.com/maoberlehner
+[vlh]: https://github.com/maoberlehner/vue-lazy-hydration/
