@@ -16,10 +16,12 @@ With `<nuxt-static-render>`, now there is. [And don't call me Shirley!][shirley]
 [api]: https://nuxtjs.org/api/
 [shirley]: https://www.youtube.com/watch?v=ixljWVyPby0
 
-Setup with:
+Install with:
 
 ```sh
-yarn install nuxt-static-render
+npm install nuxt-static-render
+# or
+yarn add nuxt-static-render
 ```
 
 Add to your Nuxt project via [`modules`][modules]:
