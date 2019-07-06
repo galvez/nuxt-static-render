@@ -1,14 +1,15 @@
 # nuxt-static-render
 
-Nuxt's [asyncData][api] comes at a cost: the embedded `__NUXT__` payload. What
-if you could render some markup on the server and not hydrate it on the client?
-You'd get a **dead component**: unable to properly update (re-render) on the 
-client-side following data updates. Even worse: you'd get a **node mismatch 
-error**, since the client wouldn't have the actual data to rerender it.
+Nuxt's [asyncData][api] comes at a cost: the embedded `__NUXT__` payload. 
+
+What if you could render some markup on the server and not hydrate it on the
+client? You'd get a **dead component**: unable to properly update (re-render)
+on the client-side following data updates. Even worse: you'd get a **node 
+mismatch error**, since the client wouldn't have the actual data to rerender it.
 
 Sometimes though, a _dead component_ is exactly what you need: say you're just
-fetching data on the server to render some content, but won't ever update
-this fragment on the client-side. Surely there's a way, right?
+fetching data on the server to render some content, but **won't ever update
+this fragment on the client-side**. Surely there's a way, right?
 
 With `<nuxt-static-render>`, now there is. [And don't call me Shirley!][shirley]
 
@@ -33,6 +34,8 @@ on the page, as many times as needed.
 Use `$staticData` to access the static rendering data. It is automatically
 populated on the server by the `serverData()` handler, which you can add to 
 any Nuxt page. From the [included example][example]:
+
+[example]: https://github.com/galvez/nuxt-static-render/blob/master/example/pages/index.vue
 
 ```html
 <template>

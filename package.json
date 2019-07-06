@@ -1,6 +1,6 @@
 {
   "name": "nuxt-static-render",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Nuxt module for SSR without rehydration payload",
   "license": "MIT",
   "publishConfig": {
