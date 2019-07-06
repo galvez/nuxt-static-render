@@ -1,0 +1,35 @@
+{
+  "name": "nuxt-static-render",
+  "version": "0.0.1",
+  "description": "Nuxt module for SSR without rehydration payload",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "main": "dist/nuxt-static-render.js",
+  "files": ["dist"],
+  "scripts": {
+    "dev": "nuxt dev",
+    "build": "nuxt build",
+    "dist": "rollup -c rollup.config.js",
+    "generate": "nuxt generate",
+    "lint": "eslint --fix --ext .js src"
+  },
+  "author": "Jonas Galvez <jonasgalvez@gmail.com>",
+  "devDependencies": {
+    "@nuxtjs/eslint-config": "^0.0.1",
+    "babel-eslint": "^10.0.2",
+    "eslint": "^6.0.1",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.18.0",
+    "eslint-plugin-jest": "^22.7.1",
+    "eslint-plugin-node": "^9.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "eslint-plugin-vue": "^5.2.3",
+    "nuxt": "^2.8.1",
+    "rollup": "^1.16.4",
+    "rollup-plugin-auto-external": "^2.0.0",
+    "rollup-plugin-commonjs": "^10.0.1"
+  }
+}
