@@ -18,11 +18,7 @@ this fragment on the client-side**.
 Install with:
 
 ```sh
-npm install nuxt-static-render
-```
-
-```sh
-yarn add nuxt-static-render
+npm install nuxt-static-render --save
 ```
 
 Add to your Nuxt project via [`modules`][modules]:
