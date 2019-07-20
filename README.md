@@ -31,7 +31,7 @@ Add to your Nuxt project via [`modules`][modules]:
 
 ```js
 export default {
-  modules: [`nuxt-static-render`]
+  modules: ['nuxt-static-render']
 }
 ```
 
