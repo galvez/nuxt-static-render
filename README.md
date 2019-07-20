@@ -19,7 +19,9 @@ Install with:
 
 ```sh
 npm install nuxt-static-render
-# or
+```
+
+```sh
 yarn add nuxt-static-render
 ```
 
