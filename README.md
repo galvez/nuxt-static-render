@@ -9,12 +9,11 @@ mismatch error**, since the client wouldn't have the actual data to rerender it.
 
 Sometimes though, a _dead component_ is exactly what you need: say you're just
 fetching data on the server to render some content, but **won't ever update
-this fragment on the client-side**. Surely there's a way, right?
+this fragment on the client-side**. 
 
-With `<nuxt-static-render>`, now there is. [And don't call me Shirley!][shirley]
+**`nuxt-static-render`** gives you that functionality with some caveats.
 
 [api]: https://nuxtjs.org/api/
-[shirley]: https://www.youtube.com/watch?v=ixljWVyPby0
 
 Install with:
 
