@@ -78,7 +78,7 @@ on `$staticData.foobar`, which is **only populated on the server** and **is not
 added to the `__NUXT__`** payload. That means this data will only be used on the 
 server to render markup and immediately discarded.
 
-**Why not call it `$serverData` instead of `$staticData`? Because it's _static data_ populated via the `serverData()` _function_. The same data object (`$staticData`) can also be populated via `clientData()`, so it made more sense to use `$staticData` for the data object.
+**Why not call it `$serverData` instead of `$staticData`**? Because it's _static data_ populated via the `serverData()` _function_. The same data object (`$staticData`) can also be populated via `clientData()`, so it made more sense to use `$staticData` for the data object.
 
 ## Caveats
 
