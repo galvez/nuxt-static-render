@@ -81,6 +81,24 @@ on `$staticData.foobar`, which is **only populated on the server** and **is not
 added to the `__NUXT__`** payload. That means this data will only be used on the 
 server to render markup and immediately discarded.
 
+**Why not call it `$serverData` instead of `$staticData`? Because it's _static data_ populated via the `serverData()` _function_. The same data object (`$staticData`) can also be populated via `clientData()`, so it made more sense to use `$staticData` for the data object.
+
+## Caveats
+
+If you tried to do this:
+
+```
+<nuxt-static-render class="top">
+  <div>{{ $staticData.obj.foobar }}</div>
+</nuxt-static-render>
+```
+
+It would result in the following error:
+
+![error-shot](https://user-images.githubusercontent.com/12291/61574783-9dc30500-aa9a-11e9-846d-fb82207f6a93.png)
+
+Because in the first template compiler run, `obj` does not exist yet. In this implementation, data for static rendering must be readily available in `$staticData`. If you know how to circumvent this limitation, let me know. Yes, I tried `v-once` but it appears to requires hydration data to be available on the client-side for at least one render. cc @evan :)
+
 ## Advanced
 
 Say you have a huge chunk of markup that needs to be server-rendered for SEO,

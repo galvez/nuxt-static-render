@@ -1,9 +1,9 @@
 
-function getDataFunc(component) {
+function getDataFunc(component, funcName) {
   let parent = component.$parent
   while (parent) {
-    if (parent.$options.staticData) {
-      return parent.$options.staticData.bind(parent)
+    if (parent.$options[funcName]) {
+      return parent.$options[funcName].bind(parent)
     }
     parent = parent.$parent
   }
