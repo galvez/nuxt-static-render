@@ -21,7 +21,7 @@ Install with:
 npm install nuxt-static-render --save
 ```
 
-Add to your Nuxt project via [`modules`][modules]:
+Add to your Nuxt project via [`modules`][modules], before all other module imports:
 
 [modules]: https://nuxtjs.org/guide/modules/
 
